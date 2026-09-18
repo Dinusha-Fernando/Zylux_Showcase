@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c12"/>
+      <stop offset="50%" stop-color="#0f1118"/>
+      <stop offset="100%" stop-color="#07080c"/>
+    </linearGradient>
+    <radialGradient id="cyanGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#00f0ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffd700" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffd700" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe680"/>
+      <stop offset="40%" stop-color="#d4af37"/>
+      <stop offset="70%" stop-color="#aa820a"/>
+      <stop offset="100%" stop-color="#ffe680"/>
+    </linearGradient>
+    <linearGradient id="diamondGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#d4f6ff"/>
+      <stop offset="70%" stop-color="#80e5ff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  
+  <!-- Subtle Grid -->
+  <g opacity="0.12" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="75" x2="1200" y2="75"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+    <line x1="820" y1="75" x2="820" y2="600"/>
+  </g>
+
+  <!-- Navigation Bar -->
+  <rect x="0" y="0" width="1200" height="70" fill="#090a0e" opacity="0.95"/>
+  <text x="60" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#ffffff" letter-spacing="4">SPARKLER</text>
+  <text x="195" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#d4af37" letter-spacing="2">ATELIER 3D</text>
+
+  <g transform="translate(420, 44)" font-family="monospace" font-size="12" fill="#9498a8">
+    <text x="0" y="0" fill="#00f0ff">01 CONFIGURATOR</text>
+    <text x="160" y="0">02 GEM VAULT</text>
+    <text x="290" y="0">03 ATELIER ARCHIVE</text>
+  </g>
+
+  <rect x="1020" y="20" width="120" height="32" rx="16" fill="#151824" stroke="#00f0ff" stroke-width="1"/>
+  <text x="1080" y="41" font-family="monospace" font-size="11" font-weight="bold" fill="#00f0ff" text-anchor="middle">BOOK VIP ↗</text>
+
+  <!-- Canvas Glow Behind Ring -->
+  <circle cx="460" cy="340" r="260" fill="url(#cyanGlow)"/>
+  <circle cx="460" cy="340" r="180" fill="url(#goldGlow)"/>
+
+  <!-- 3D Ring Illustration -->
+  <g transform="translate(460, 340)">
+    <!-- Base Shadow -->
+    <ellipse cx="0" cy="140" rx="180" ry="24" fill="#000000" opacity="0.6"/>
+
+    <!-- Outer Ring Band -->
+    <ellipse cx="0" cy="0" rx="150" ry="105" fill="none" stroke="url(#goldRing)" stroke-width="26"/>
+    <!-- Inner Ring Shadow -->
+    <ellipse cx="0" cy="0" rx="124" ry="79" fill="none" stroke="#5a4205" stroke-width="6"/>
+
+    <!-- Diamond Setting Crown -->
+    <path d="M -30 -105 L 30 -105 L 42 -145 L 0 -170 L -42 -145 Z" fill="url(#goldRing)"/>
+
+    <!-- Brilliant Cut Solitaire Diamond -->
+    <polygon points="0,-168 36,-144 24,-112 -24,-112 -36,-144" fill="url(#diamondGrad)"/>
+    <polygon points="0,-168 0,-112 24,-112 36,-144" fill="#ffffff" opacity="0.4"/>
+    <polygon points="0,-168 0,-112 -24,-112 -36,-144" fill="#6fe3ff" opacity="0.3"/>
+
+    <!-- Sparkle Stars -->
+    <g transform="translate(25, -170)">
+      <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#ffffff"/>
+    </g>
+    <g transform="translate(-40, -120) scale(0.6)">
+      <polygon points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3" fill="#00f0ff"/>
+    </g>
+  </g>
+
+  <!-- 3D Configurator UI Overlays on Left -->
+  <g transform="translate(60, 110)">
+    <rect x="0" y="0" width="220" height="42" rx="8" fill="#151824" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="16" y="26" font-family="monospace" font-size="12" fill="#00f0ff">LIVE 3D VIEW // 60 FPS</text>
+
+    <!-- Metal Selector -->
+    <g transform="translate(0, 70)">
+      <text x="0" y="0" font-family="monospace" font-size="11" fill="#9498a8">BAND MATERIAL</text>
+      <circle cx="16" cy="24" r="14" fill="#d4af37" stroke="#ffffff" stroke-width="2"/>
+      <circle cx="56" cy="24" r="14" fill="#e5e5e5" stroke="#ffffff" stroke-width="0.5" opacity="0.6"/>
+      <circle cx="96" cy="24" r="14" fill="#e6a89c" stroke="#ffffff" stroke-width="0.5" opacity="0.6"/>
+    </g>
+
+    <!-- Carat Weight Slider -->
+    <g transform="translate(0, 150)">
+      <text x="0" y="0" font-family="monospace" font-size="11" fill="#9498a8">SOLITAIRE CARAT (2.40 CT)</text>
+      <line x1="0" y1="20" x2="200" y2="20" stroke="#1f2333" stroke-width="6" stroke-linecap="round"/>
+      <line x1="0" y1="20" x2="140" y2="20" stroke="#00f0ff" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="140" cy="20" r="9" fill="#00f0ff" stroke="#090a0e" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Right Customizer Panel -->
+  <g transform="translate(860, 110)">
+    <rect x="0" y="0" width="280" height="450" rx="16" fill="#11131a" stroke="#ffffff" stroke-opacity="0.1"/>
+
+    <text x="24" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700" fill="#ffffff">The Celestial Solitaire</text>
+    <text x="24" y="68" font-family="monospace" font-size="11" fill="#00f0ff">ID: SPK-2025-094 // BESPOKE</text>
+
+    <line x1="24" y1="90" x2="256" y2="90" stroke="#ffffff" stroke-opacity="0.08"/>
+
+    <text x="24" y="125" font-family="monospace" font-size="11" fill="#9498a8">SPECIFICATIONS</text>
+    <text x="24" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#ffffff">Cut: Round Brilliant Ideal</text>
+    <text x="24" y="175" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#ffffff">Clarity: VVS1 (Flawless)</text>
+    <text x="24" y="200" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#ffffff">Metal: 18K Yellow Gold</text>
+    <text x="24" y="225" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#ffffff">Certification: GIA Dual Guard</text>
+
+    <!-- Price and CTA -->
+    <rect x="24" y="260" width="232" height="70" rx="10" fill="#151824" stroke="#ffffff" stroke-opacity="0.06"/>
+    <text x="40" y="288" font-family="monospace" font-size="11" fill="#9498a8">ESTIMATED VALUATION</text>
+    <text x="40" y="315" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#00f0ff">$14,850 USD</text>
+
+    <rect x="24" y="355" width="232" height="44" rx="8" fill="#00f0ff"/>
+    <text x="140" y="382" font-family="monospace" font-size="12" font-weight="bold" fill="#090a0e" text-anchor="middle">REQUEST PRIVATE FITTING →</text>
+  </g>
+</svg>

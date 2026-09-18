@@ -1,0 +1,391 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-zylux-black: #101014;
+  --color-zylux-graphite: #1d1c22;
+  --color-zylux-plum: #2b222d;
+  --color-zylux-silver: #c8c3cc;
+  --color-zylux-silver-light: #e7e3e8;
+  --color-zylux-magenta: #f02a8f;
+  --color-zylux-coral: #ff6657;
+  --color-zylux-orange: #ff8a3d;
+  --color-zylux-white: #ffffff;
+  --color-zylux-muted: #918c96;
+
+  --color-zylux-base: #101014;
+  --color-zylux-surface: #1d1c22;
+  --color-zylux-card: rgba(255, 255, 255, 0.035);
+  --color-zylux-card-hover: #2b222d;
+  --color-zylux-border: rgba(255, 255, 255, 0.10);
+  --color-zylux-border-strong: rgba(255, 255, 255, 0.20);
+  --color-zylux-fg: #ffffff;
+
+  --font-sans: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "Fira Code", monospace;
+}
+
+:root {
+  --background: #f6f7fb;
+  --foreground: #0f0e13;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  background-color: #f6f7fb;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(240, 42, 143, 0.08) 0%, transparent 60%),
+    linear-gradient(to bottom, rgba(246, 247, 251, 0.75) 0%, rgba(246, 247, 251, 0.88) 100%),
+    url('/assets/site-bg.jpg');
+  background-attachment: fixed;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  selection-background-color: rgba(240, 42, 143, 0.35);
+  selection-color: #ffffff;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background: rgba(240, 42, 143, 0.35);
+  color: #ffffff;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101014;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1d1c22;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2b222d;
+}
+
+/* Zylux Signature Gradient */
+.zylux-gradient {
+  background: linear-gradient(
+    135deg,
+    #f02a8f 0%,
+    #ff4f78 45%,
+    #ff6657 72%,
+    #ff8a3d 100%
+  );
+}
+
+.zylux-gradient-text {
+  background: linear-gradient(
+    135deg,
+    #f02a8f 0%,
+    #ff4f78 45%,
+    #ff6657 72%,
+    #ff8a3d 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.zylux-silver-text {
+  background: linear-gradient(135deg, #ffffff 0%, #c8c3cc 50%, #918c96 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow Effects */
+.magenta-glow {
+  box-shadow: 0 0 20px rgba(240, 42, 143, 0.25), 0 0 60px rgba(240, 42, 143, 0.12);
+}
+
+.coral-glow {
+  box-shadow: 0 0 20px rgba(255, 102, 87, 0.25), 0 0 60px rgba(255, 102, 87, 0.12);
+}
+
+.zylux-button-glow {
+  box-shadow: 0 0 20px rgba(240, 42, 143, 0.3), 0 0 40px rgba(255, 102, 87, 0.15);
+}
+
+.zylux-button-glow:hover {
+  box-shadow: 0 0 28px rgba(240, 42, 143, 0.45), 0 0 55px rgba(255, 102, 87, 0.25);
+}
+
+/* Metallic Light Frosted Glass Cards */
+.card-metallic {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 14, 19, 0.08);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-metallic:hover {
+  border-color: rgba(240, 42, 143, 0.45);
+  box-shadow: 0 15px 35px rgba(240, 42, 143, 0.12), 0 0 0 1px rgba(240, 42, 143, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Background Atmosphere Patterns */
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(15, 14, 19, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-dot-grid-dense {
+  background-image: radial-gradient(rgba(240, 42, 143, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.ambient-plum-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(240, 42, 143, 0.06) 0%, rgba(246, 247, 251, 0) 75%);
+}
+
+.ambient-hero-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(240, 42, 143, 0.08) 0%, rgba(255, 102, 87, 0.05) 40%, transparent 70%);
+}
+
+/* Custom cursor hide on touch */
+@media (pointer: coarse) {
+  .custom-build-cursor {
+    display: none !important;
+  }
+}
+
+/* Hide scrollbar for clean horizontal carousel tracks */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ==========================================================================
+   LIGHT MODE COMPREHENSIVE ADAPTATION
+   ========================================================================== */
+
+html.light {
+  --background: #f6f7fb;
+  --foreground: #0f0e13;
+}
+
+html.light body {
+  background-color: #f6f7fb !important;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(240, 42, 143, 0.08) 0%, transparent 60%),
+    linear-gradient(to bottom, rgba(246, 247, 251, 0.75) 0%, rgba(246, 247, 251, 0.88) 100%),
+    url('/assets/site-bg.jpg') !important;
+  background-attachment: fixed !important;
+  background-position: center top !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  color: #0f0e13 !important;
+}
+
+/* Backgrounds in Light Mode */
+html.light .bg-\[\#101014\] {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-\[\#101014\]\/90,
+html.light .bg-\[\#101014\]\/98 {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+}
+
+html.light .bg-\[\#1d1c22\] {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(16px) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+html.light .bg-\[\#1d1c22\]\/70,
+html.light .bg-\[\#1d1c22\]\/80,
+html.light .bg-\[\#1d1c22\]\/90,
+html.light .bg-\[\#1d1c22\]\/95 {
+  background-color: rgba(255, 255, 255, 0.90) !important;
+  backdrop-filter: blur(16px) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+html.light .bg-\[\#2b222d\] {
+  background-color: #fcf1f5 !important;
+}
+
+html.light .bg-\[\#2b222d\]\/60,
+html.light .bg-\[\#2b222d\]\/70 {
+  background-color: rgba(252, 241, 245, 0.85) !important;
+}
+
+html.light .bg-\[\#15151a\]\/95,
+html.light .bg-\[\#0d0d12\] {
+  background-color: #f0f2f7 !important;
+}
+
+html.light .from-\[\#1d1c22\],
+html.light .from-\[\#1d1c22\]\/90,
+html.light .from-\[\#1d1c22\]\/95 {
+  --tw-gradient-from: #ffffff !important;
+}
+
+html.light .to-\[\#101014\] {
+  --tw-gradient-to: #f4f5fa !important;
+}
+
+html.light .via-\[\#15151a\]\/95 {
+  --tw-gradient-via: #fafbfe !important;
+}
+
+html.light .via-\[\#2b222d\]\/60,
+html.light .via-\[\#2b222d\]\/70 {
+  --tw-gradient-via: rgba(252, 241, 245, 0.9) !important;
+}
+
+html.light [class*="bg-gradient-to-"][class*="from-[#1d1c22]"] {
+  background-image: linear-gradient(to bottom, #ffffff, #f4f5fa) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+  border-color: rgba(15, 14, 19, 0.10) !important;
+}
+
+html.light [class*="bg-gradient-to-r"][class*="from-[#1d1c22]"] {
+  background-image: linear-gradient(to right, #ffffff, #fcf1f5, #ffffff) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+  border-color: rgba(15, 14, 19, 0.10) !important;
+}
+
+/* Transparent full-width sections to allow background wallpaper to shine continuously */
+section.bg-\[\#101014\],
+section.bg-\[\#1d1c22\],
+html.light section.bg-\[\#101014\],
+html.light section.bg-\[\#1d1c22\] {
+  background-color: transparent !important;
+}
+
+/* Translucent glass cards in Light Mode */
+html.light .bg-white\/\[0\.035\],
+html.light .bg-white\/\[0\.04\],
+html.light .bg-white\/\[0\.05\] {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(16px) !important;
+  border-color: rgba(15, 14, 19, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* Retain high-contrast white text within dark device frames and mockup headers */
+html.light [class*="aspect-"] .text-white,
+html.light [class*="aspect-"] .text-\[\#ffffff\],
+html.light .bg-\[\#0d0d12\],
+html.light .bg-\[\#0d0d12\] .text-white,
+html.light .bg-\[\#0d0d12\] .text-\[\#ffffff\] {
+  color: #ffffff !important;
+}
+
+/* Borders in Light Mode */
+html.light .border-white\/10,
+html.light .border-white\/15,
+html.light .border-white\/20,
+html.light .border-white\/\[0\.08\],
+html.light .border-white\/\[0\.06\],
+html.light .border-white\/\[0\.04\] {
+  border-color: rgba(15, 14, 19, 0.10) !important;
+}
+
+html.light .border-white\/5 {
+  border-color: rgba(15, 14, 19, 0.06) !important;
+}
+
+/* Typography in Light Mode */
+html.light .text-white,
+html.light .text-\[\#ffffff\] {
+  color: #0f0e13 !important;
+}
+
+html.light .text-\[\#e7e3e8\] {
+  color: #2b2734 !important;
+}
+
+html.light .text-\[\#c8c3cc\] {
+  color: #524d5b !important;
+}
+
+html.light .text-\[\#918c96\] {
+  color: #757080 !important;
+}
+
+/* Ensure buttons and gradients retain proper contrast */
+html.light .zylux-gradient-text {
+  background: linear-gradient(135deg, #d81b7a 0%, #f02a8f 45%, #ff5240 72%, #ff7a29 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+html.light .bg-gradient-to-r.from-\[\#f02a8f\] *,
+html.light .bg-gradient-to-r.from-\[\#f02a8f\] {
+  color: #ffffff !important;
+}
+
+html.light .bg-black\/30 {
+  background-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light .bg-white\/\[0\.05\],
+html.light .bg-white\/\[0\.04\],
+html.light .bg-white\/\[0\.03\],
+html.light .bg-white\/10 {
+  background-color: rgba(15, 14, 19, 0.05) !important;
+}
+
+/* Form inputs & textareas in Light Mode */
+html.light input,
+html.light textarea {
+  background-color: #ffffff !important;
+  color: #0f0e13 !important;
+  border-color: rgba(15, 14, 19, 0.15) !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #928d9d !important;
+}
+
+/* Navigation & Mobile menu in Light Mode */
+html.light header {
+  background-color: rgba(246, 247, 251, 0.90) !important;
+  border-color: rgba(15, 14, 19, 0.08) !important;
+}
+
+html.light header nav {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(15, 14, 19, 0.10) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Footer in Light Mode */
+html.light footer {
+  background-color: #edf0f5 !important;
+  border-color: rgba(15, 14, 19, 0.08) !important;
+}
+
+/* Subtle scrollbar in light mode */
+html.light ::-webkit-scrollbar-track {
+  background: #f0f2f7;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #d4d7e0;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #b5b9c5;
+}
