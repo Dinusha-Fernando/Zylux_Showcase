@@ -98,7 +98,7 @@ export const projectsData: Project[] = [
     ],
     year: '2024',
     featured: true,
-    image: '/projects/aussie-supplements.jpg',
+    image: '/projects/aussie-supplements.png',
     architectureHighlights: [
       'Turbopack-optimized bundle for rapid mobile loading',
       'PostgreSQL optimized query caching for product filters',

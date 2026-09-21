@@ -48,8 +48,6 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
-  selection-background-color: rgba(240, 42, 143, 0.35);
-  selection-color: #ffffff;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
 
@@ -95,12 +93,14 @@ body {
     #ff6657 72%,
     #ff8a3d 100%
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .zylux-silver-text {
   background: linear-gradient(135deg, #ffffff 0%, #c8c3cc 50%, #918c96 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -326,6 +326,7 @@ html.light .text-\[\#918c96\] {
 /* Ensure buttons and gradients retain proper contrast */
 html.light .zylux-gradient-text {
   background: linear-gradient(135deg, #d81b7a 0%, #f02a8f 45%, #ff5240 72%, #ff7a29 100%) !important;
+  background-clip: text !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
 }
